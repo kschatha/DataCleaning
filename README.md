@@ -20,6 +20,6 @@ from here - https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%2
     5. Creates a second, independent tidy data set with the average of each variable for         
     each activity and each subject. 
 
--The resulting tidy data set is written in a file called "new_dataset_with_average_over_cols.txt". t is a 180x68 data frame.
+- The resulting tidy data set is written in a file called "new_dataset_with_average_over_cols.txt". t is a 180x68 data frame.
 
 
