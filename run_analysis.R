@@ -50,7 +50,7 @@ names( subjectData) <- c("subject")
 
 #By this points, all the data sets are properly labeled
 #combine into 1 big dataset
-bigData <- cbind( meanSdData, labelData, subjectData)
+bigData <- cbind( subjectData, labelData, meanSdData)
 
 
 #5.Creates a second, independent tidy data set with the 
@@ -77,7 +77,7 @@ for( i in 1:numUniqSub)
     {
         newData[row,1] <- uniqSubjects[i]
         newData[row,2] <- activities[j,2]
-        tmpData <- bigData[bigData$subject == i & bigData$activity == j,]
+        tmpData <- bigData[bigData$subject == i & bigData$activity == activities[j,2],]
         newData[row,3:numCols] <- colMeans( tmpData[,3:numCols])
         row = row + 1
     }
